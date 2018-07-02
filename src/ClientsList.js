@@ -1,32 +1,42 @@
 import React, { Component } from 'react';
-import { Input, Label, Menu } from 'semantic-ui-react';
+import { Image as ImageComponent, Item, Label } from 'semantic-ui-react';
 import './App.css';
 
-class ClientsList extends Component {
-  state = { activeItem: 'inbox' }
+class Search extends Component {
+}
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+class ClientsListItem extends Component {
   render() {
-    const { activeItem } = this.state
+    const paragraph = <ImageComponent src='/images/wireframe/short-paragraph.png' />
     return (
-      <Menu vertical>
-        <Menu.Item>
-          <Input icon='search' placeholder='Search...' />
-        </Menu.Item>
-        <Menu.Item name='inbox' active={activeItem === 'inbox'} onClick={this.handleItemClick}>
-          Client1
-        </Menu.Item>
+      <Item>
+        {/* <Item.Image src='/images/wireframe/image.png' /> */}
+        <Item.Content>
+          <Item.Header as='a'>12 Years a Slave</Item.Header>
+          <Item.Meta>
+            <span className='cinema'>Union Square 14</span>
+          </Item.Meta>
+          <Item.Description>{paragraph}</Item.Description>
+          <Item.Extra>
+            <Label>IMAX</Label>
+            <Label icon='globe' content='Additional Languages' />
+          </Item.Extra>
+        </Item.Content>
+      </Item>
+    )
+  }
+}
 
-        <Menu.Item name='spam' active={activeItem === 'spam'} onClick={this.handleItemClick}>
-          Client2
-        </Menu.Item>
-
-        <Menu.Item name='updates' active={activeItem === 'updates'} onClick={this.handleItemClick}>
-          Client3
-        </Menu.Item>
-      </Menu>
+class ClientsList extends Component {
+  render() {
+    return (
+      <Item.Group divided>
+        <ClientsListItem />
+      </Item.Group>
     );
   }
 }
 
+class ClientDetails extends Component {
+}
 export default ClientsList;
