@@ -6,7 +6,20 @@ import data from './clients.json';
 class Search extends Component {
 }
 
-class ClientsListItem extends Component {
+class ClientsListItem extends React.Component  {
+  render() {
+    return(
+      <Item>
+        <Item.Image src={this.props.client.general.avatar} className='avatar' />
+        <Item.Content>
+          <Item.Header as='a'>{this.props.client.general.firstName} {this.props.client.general.lastName}</Item.Header>
+          <Item.Meta>
+            <span className='job-title'>{this.props.client.job.title}</span>
+          </Item.Meta>
+        </Item.Content>
+      </Item>
+    )
+  }
 }
 
 class ClientsList extends Component {
@@ -22,15 +35,7 @@ class ClientsList extends Component {
       <Item.Group divided>
         {this.state.clients.map(function(client, i){
           return(
-            <Item>
-              <Item.Image src={client.general.avatar} className='avatar' />
-              <Item.Content>
-                <Item.Header as='a'>{client.general.firstName} {client.general.lastName}</Item.Header>
-                <Item.Meta>
-                  <span className='job-title'>{client.job.title}</span>
-                </Item.Meta>
-              </Item.Content>
-            </Item>
+            <ClientsListItem client={client}/>
           )
         })}
       </Item.Group>
