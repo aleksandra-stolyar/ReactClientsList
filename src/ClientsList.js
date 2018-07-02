@@ -4,6 +4,7 @@ import './App.css';
 import data from './clients.json';
 
 class Search extends Component {
+
 }
 
 class ClientsListItem extends React.Component  {
@@ -63,10 +64,10 @@ class ClientsPage extends Component {
   render () {
     return (
       <Grid columns={2} divided>
-        <Grid.Column>
+        <Grid.Column width={4}>
           <ClientsList/>
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column width={12}>
           <ClientDetails/>
         </Grid.Column>
       </Grid>
