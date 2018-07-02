@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import ClientsList from './ClientsList';
+import ClientsPage from './ClientsList';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<ClientsList />, document.getElementById('root'));
+ReactDOM.render(<ClientsPage />, document.getElementById('root'));
 registerServiceWorker();
