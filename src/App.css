@@ -1,4 +1,23 @@
-.avatar img{
-  max-width: 50%;
-  height: auto;
+.ui.items:first-child {
+  margin-top: 1em !important;
+}
+
+.items .item {
+  padding-left: 1em !important;
+} 
+
+.items-list {
+  padding-right: 0 !important;
+}
+.clients-search input {
+  border-radius: 0 !important;
+  font-size: 1.2em;
+}
+
+.item-details {
+  margin-top: 3em;
+}
+
+.avatar-thumb img {
+  width: 80% !important;
 }
