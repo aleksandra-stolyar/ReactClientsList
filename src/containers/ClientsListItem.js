@@ -4,7 +4,7 @@ import { Item } from 'semantic-ui-react';
 class ClientsListItem extends Component  {
     render() {
         return(
-            <Item>
+            <Item onClick={this.props.onClick}>
                 <Item.Image
                     src={this.props.client.general.avatar}
                     verticalAlign='top'
