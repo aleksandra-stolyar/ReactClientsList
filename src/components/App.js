@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Header } from 'semantic-ui-react';
 import ClientsList from '../containers/ClientsList';
+import ClientDetails from '../containers/ClientDetails';
 
 import '../index.css';
 
@@ -10,7 +11,7 @@ const App = () => (
             <ClientsList/>
         </Grid.Column>
         <Grid.Column width={12} className='item-details'>
-            <Header as='h1' content='Dummy'/>
+            <ClientDetails/>
         </Grid.Column>
     </Grid>
 );
