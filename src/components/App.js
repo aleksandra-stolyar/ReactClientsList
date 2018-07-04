@@ -3,7 +3,7 @@ import { Grid, Header } from 'semantic-ui-react';
 import ClientsList from '../containers/ClientsList';
 import ClientDetails from '../containers/ClientDetails';
 
-import '../index.css';
+import './App.css';
 
 const App = () => (
     <Grid columns={2} divided>
