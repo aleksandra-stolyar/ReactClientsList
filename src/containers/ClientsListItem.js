@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Item } from 'semantic-ui-react';
+import classNames from 'classnames/bind';
 
 class ClientsListItem extends Component  {
+
     render() {
         return(
-            <Item onClick={this.props.onClick}>
+            <Item onClick={this.props.onClick} className={classNames('client-item-list', this.props.className)}>
                 <Item.Image
                     src={this.props.client.general.avatar}
                     verticalAlign='top'

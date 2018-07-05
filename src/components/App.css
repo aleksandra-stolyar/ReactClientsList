@@ -2,9 +2,18 @@
   margin-top: 1em !important;
 }
 
-.items .item {
+.client-item-list {
   padding-left: 1em !important;
 } 
+
+.client-item-list:hover {
+  background-color: #f7f7f7 !important;
+  cursor: pointer !important;
+}
+.client-item-list.active {
+  background-color: #dfe3ee !important;
+  cursor: pointer !important;
+}
 
 .items-list {
   padding-right: 0 !important;
@@ -20,4 +29,4 @@
 
 .avatar-thumb img {
   width: 80% !important;
-}
+} 
