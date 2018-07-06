@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Item } from 'semantic-ui-react';
+import { List } from 'semantic-ui-react';
 import ClientsListItem from './ClientsListItem'
 import {selectClient} from '../actions/index';
 
@@ -28,9 +28,9 @@ class ClientsList extends Component {
 
     render() {
       return (
-        <Item.Group divided>
+        <List divided verticalAlign='middle' id='clients-list'>
             {this.createListItems()}
-        </Item.Group>
+        </List>
       );
     }
 }

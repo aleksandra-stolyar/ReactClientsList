@@ -3,6 +3,7 @@ import {Grid, Header, List, Image, Icon} from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
 class ClientDetails extends Component {
+
     render() {
         if (!this.props.client) {
             return (
