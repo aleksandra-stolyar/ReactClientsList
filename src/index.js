@@ -7,7 +7,6 @@ import App from './components/App';
 import './index.css';
 import rootReducer from './reducers';
 
-
 const store = createStore(rootReducer);
 
 ReactDOM.render(

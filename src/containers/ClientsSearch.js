@@ -9,6 +9,7 @@ class ClientsSearch extends Component {
           icon='search'
           iconPosition='right'
           placeholder='Search users...'
+          id='client-search'
         />
       );
     }
