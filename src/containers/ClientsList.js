@@ -10,12 +10,12 @@ class ClientsList extends Component {
 
     handleActive = (client) => {
         if (this.props.activeItem && client === this.props.activeItem) {
-            // console.log("I'm active")
             return 'active';
         }
     }
+
     createListItems() {
-        return this.props.clients.map((client, i) => {
+        return this.props.searchResults.map((client, i) => {
             return (
                 <ClientsListItem
                     key={i}
@@ -39,10 +39,11 @@ class ClientsList extends Component {
 
 const mapStateToProps = state => ({
     clients: state.clients,
-    activeItem: state.activeClient
+    activeItem: state.activeClient,
+    searchResults: state.searchResults
 })
 
-const mapDispatchToProps = dispatch =>(
+const mapDispatchToProps = dispatch => (
     bindActionCreators({selectClient: selectClient}, dispatch)
 )
 
