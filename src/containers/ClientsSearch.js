@@ -10,23 +10,32 @@ class ClientsSearch extends Component {
     super(props);
 
     this.state = {
-        searchQuery: ''
+        searchQuery: '',
+        isLoading: false
     }
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({
-      searchQuery: event.target.value
+        searchQuery: event.target.value,
+        isLoading: true
     });
-    this.props.searchClients(event.target.value)
+    var value = event.target.value;
+    setTimeout(() => {
+        this.props.searchClients(value)
+        this.setState({
+            isLoading: false
+        });
+    }, 300)
   }
 
   render() {
-    const {searchQuery} = this.state;
+    const {searchQuery, isLoading} = this.state;
     return (
       <Input
         fluid
         icon='search'
+        loading={isLoading}
         iconPosition='right'
         placeholder='Search users...'
         id='client-search'

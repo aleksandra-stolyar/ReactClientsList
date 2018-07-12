@@ -14,7 +14,7 @@ class ClientsList extends Component {
         }
     }
 
-    createListItems() {
+    createListItems = () => {
         return this.props.searchResults.map((client, i) => {
             return (
                 <ClientsListItem
