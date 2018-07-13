@@ -3,7 +3,6 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { List } from 'semantic-ui-react';
 import ClientsListItem from './ClientsListItem'
-import ClientsSearch  from './ClientsSearch'
 import {selectClient} from '../actions/index';
 
 class ClientsList extends Component {
@@ -30,7 +29,6 @@ class ClientsList extends Component {
     render() {
       return (
         <List divided verticalAlign='middle' id='clients-list'>
-            <ClientsSearch/>
             {this.createListItems()}
         </List>
       );

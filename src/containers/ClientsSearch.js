@@ -32,16 +32,17 @@ class ClientsSearch extends Component {
   render() {
     const {searchQuery, isLoading} = this.state;
     return (
-      <Input
-        fluid
-        icon='search'
-        loading={isLoading}
-        iconPosition='right'
-        placeholder='Search users...'
-        id='client-search'
-        value={searchQuery}
-        onChange={this.handleChange.bind(this)}
-      />
+      <div id='client-search'>
+        <Input
+          fluid
+          icon='search'
+          loading={isLoading}
+          iconPosition='right'
+          placeholder='Search users...'
+          value={searchQuery}
+          onChange={this.handleChange.bind(this)}
+        />
+      </div>
     );
   }
 }
