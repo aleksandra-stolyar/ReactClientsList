@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { List } from 'semantic-ui-react';
-import ClientsListItem from './ClientsListItem'
+import ClientsListItem from '../components/ClientsListItem'
 import {selectClient} from '../actions/index';
 
 class ClientsList extends Component {
@@ -36,7 +36,6 @@ class ClientsList extends Component {
 }
 
 const mapStateToProps = state => ({
-    clients: state.clients,
     activeItem: state.activeClient,
     searchResults: state.searchResults
 })
