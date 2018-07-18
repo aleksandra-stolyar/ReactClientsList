@@ -37,7 +37,6 @@ class ClientsSearch extends Component {
           fluid
           icon='search'
           loading={isLoading}
-          iconPosition='right'
           placeholder='Search users...'
           value={searchQuery}
           onChange={this.handleChange.bind(this)}
