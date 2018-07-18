@@ -1,5 +1,4 @@
 import reducer from './searchClients';
-import * as actions from '../actions/index';
 import data from '../clients.json';
 
 describe('clients search reducer', () => {
