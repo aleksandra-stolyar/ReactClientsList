@@ -1,5 +1,4 @@
 import data from '../clients.json';
-import { Object } from 'core-js';
 const initialState = data;
 
 export default function (state = initialState, action) {
@@ -20,7 +19,7 @@ export default function (state = initialState, action) {
                         }
                     }
                     var clientDetails = [].concat.apply([], categoryDetailsArray).join(' ');
-                    return clientDetails.includes(action.payload);
+                    return clientDetails.includes(action.payload.toLowerCase());
 
                 })
             )
