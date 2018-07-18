@@ -1,4 +1,4 @@
-import reducer from './activeItem';
+import reducer from '../activeItem';
 
 describe('clients search reducer', () => {
     const client = {

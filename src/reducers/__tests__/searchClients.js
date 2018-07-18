@@ -1,5 +1,5 @@
-import reducer from './searchClients';
-import data from '../clients.json';
+import reducer from '../searchClients';
+import data from '../../clients.json';
 
 describe('clients search reducer', () => {
     it('should provide the initial state', () => {
