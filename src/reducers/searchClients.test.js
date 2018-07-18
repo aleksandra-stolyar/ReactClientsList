@@ -6,6 +6,21 @@ describe('clients search reducer', () => {
         expect(reducer(undefined, {})).toEqual(data)
     })
 
+
+    it('should handle SEARCH_CLIENTS', () => {
+      expect(
+        reducer(data, {
+          type: 'SEARCH_CLIENTS',
+          payload: 'lia'
+        })
+      ).toEqual([
+        data[0],
+        data[8],
+        data[10]
+      ])
+    })
+
+
     it('should handle SEARCH_CLIENTS', () => {
         expect(
           reducer(data, {
