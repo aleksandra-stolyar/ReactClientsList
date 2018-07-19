@@ -11,7 +11,7 @@ export default function (state = initialState, action) {
                     for (var category in clientClone) {
                         var categoryDetails =  Object.assign({}, clientClone[category]);
                         for (var key in categoryDetails) {
-                            if (key == 'avatar') {
+                            if (key === 'avatar') {
                                 delete categoryDetails[key];
                             } else {
                                 categoryDetailsArray.push(categoryDetails[key].toLowerCase());
